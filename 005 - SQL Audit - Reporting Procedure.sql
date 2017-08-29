@@ -25,9 +25,9 @@ CREATE PROCEDURE [dbo].[p_AuditGetData]
 /*
 ------------------------------------------------------------------------------------------------------
 Author:			Richard Grieveson
-Date:			01/11/2016
+Date:			23/04/2014 - 29/08/2017
 Description:	
-Version			3.02
+Version			3.11
 To Run:			EXEC [p_AuditGetData] 
 					    @DateFrom = '2000-01-01'
 						,@DateTo = '2100-12-31'
@@ -40,7 +40,8 @@ To Run:			EXEC [p_AuditGetData]
 						DROP TABLE ##audit_pivot
 
 Change History:	10/08/2016 - RHG - Creation  
-				01/11/2016 - Richard Grieveson - Make collation proof             
+				01/11/2016 - Richard Grieveson - Make collation proof    
+				29/08/2017 - Richard Grieveson - Move to GitHub         
 ------------------------------------------------------------------------------------------------------
 */
 
