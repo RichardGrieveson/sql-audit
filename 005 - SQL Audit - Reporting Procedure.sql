@@ -31,13 +31,10 @@ Version			3.11
 To Run:			EXEC [p_AuditGetData] 
 					    @DateFrom = '2000-01-01'
 						,@DateTo = '2100-12-31'
-						,@TableName = 'LoginUser'
-						,@PrimaryKey = 2
+						,@TableName = 'InvoiceHeader'
+						,@PrimaryKey = 'DD9DAB22-1CF7-4D09-A7B8-2A9CD51A3B70'
 						,@AuditBy = ''
 						,@Pivot = 1
-
-						DROP TABLE ##current_pivot
-						DROP TABLE ##audit_pivot
 
 Change History:	10/08/2016 - RHG - Creation  
 				01/11/2016 - Richard Grieveson - Make collation proof    
@@ -158,9 +155,7 @@ AND				[TableName] = CASE WHEN @TableName = '' THEN [TableName] ELSE @TableName 
 AND				AuditBy = CASE WHEN @AuditBy = '' THEN AuditBy ELSE @AuditBy END
 AND				PrimaryKeyValue  = CASE WHEN @PrimaryKey = '' THEN PrimaryKeyValue ELSE @PrimaryKey END
 
-
-
-------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 --If we are returning the results as per the audit table (down the page)
 ------------------------------------------------------------------------------------------------------
 IF @Pivot = 0
